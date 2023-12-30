@@ -170,7 +170,6 @@ body {
 .checkbox-group input:checked + label::before {
 	background: #153416;
   border: 1px solid #153416;
-  transition: .2s linear;
 }
 
 .checkbox-group input:checked + label:hover::before {
