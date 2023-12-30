@@ -1,0 +1,259 @@
+@import url('reset.css');
+/* @import url('fonts.css'); */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* !Global */
+
+
+body {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.container {
+	width: 1240px;
+	margin: 0 auto;
+}
+
+.wrapper {
+  background: linear-gradient(rgba(22.31, 21.23, 21.23, 0.50), rgba(22.31, 21.23, 21.23, 0.50)), url(../img/bg.jpg) center / cover;
+  height: 100vh;
+  position: relative;
+}
+
+.main {
+  max-width: 496px;
+  height: 100%;
+  margin-left: auto;
+  background: rgba(233, 233, 233, 0.25);
+  backdrop-filter: blur(5px);
+  overflow-y: scroll;
+}
+
+.input-box {
+  max-width: 340px;
+  height: 500px;
+  margin: 60px auto;
+  color: white;
+}
+
+/* custom switch */
+
+.switch-menu {
+  margin-bottom: 75px;
+}
+
+.switch-menu input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.switch-menu input + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 12px 0;
+  border: 1px solid #153416;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch-menu input + label::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 168px;
+  height: 32px;
+  background: #153416;
+  border: none;
+  border-radius: 30px;
+  transition: .2s linear;
+}
+
+.switch-menu input:checked + label::before {
+  content: '';
+  left: calc(100% - 170px);
+}
+
+.switch-menu span {
+  position: relative;
+  flex: 1 1 50%;
+}
+
+.title {
+  margin-bottom: 29px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  
+}
+
+/* email / password field */
+
+.input-field {
+  margin-bottom: 21px;
+}
+
+.input-field input {
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  background: #929191;
+  padding: 15px 0 15px 20px;
+  margin-bottom: 15px;
+}
+
+.input-field input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.input-field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/* custom checkbox */
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.checkbox-group a {
+  color: #153416;
+}
+
+.checkbox-group a:hover {
+  color: rgba(21, 52, 22, 0.7);
+}
+
+.checkbox-group input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.checkbox-group input + label {
+	padding: 5px 5px 5px 25px;
+	margin-right: 20px;
+	position: relative;
+	cursor: pointer;
+  vertical-align: top;
+}
+
+.checkbox-group input + label::before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid white;
+	border-radius: 2px;
+}
+
+.checkbox-group input:checked + label::before {
+	background: #153416;
+  border: 1px solid #153416;
+  transition: .2s linear;
+}
+
+.checkbox-group input:checked + label:hover::before {
+	background: rgba(21, 52, 22, 0.7);
+}
+
+.checkbox-group input:checked + label::after {
+  content: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Vector 3' d='M1 6L5 10L10 1' stroke='white' stroke-linecap='round'/%3E%3C/svg%3E");
+  top: 6px;
+	left: 3px;
+  position: absolute;
+}
+
+/* enter site button */
+
+.submit-button {
+  margin-bottom: 55px;
+}
+
+.submit-button input {
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 0;
+  color: white;
+  cursor: pointer;
+  background: #153416;
+  transition: .2s linear;
+}
+
+.submit-button input:hover {
+  background: rgba(21, 52, 22, 0.7);
+}
+
+/* reg link */
+
+.reg {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  color: #153416;
+}
+
+.reg a {
+  color: white;
+}
+
+.reg a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* bottom links */
+
+.links {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.links span {
+  display: block;
+  color: #153416;
+  margin-bottom: 20px;
+}
+
+.links-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #153416;
+  transition: .2s linear;
+}
+
+.links-menu li:first-child .icon {
+  width: 14px;
+  height: 24px;
+}
+
+.links-menu a:hover .icon {
+  fill: rgba(21, 52, 22, 0.7);
+}
